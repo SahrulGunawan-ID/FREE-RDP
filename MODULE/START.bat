@@ -14,9 +14,10 @@ REM 🖼️ Tambahkan wallpaper autorun ke registry (gunakan direktori user agar
 set "WALLPATH=%USERPROFILE%\wallpaper.bat"
 REG ADD "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /f /v Wallpaper /t REG_SZ /d "%WALLPATH%" >nul 2>&1
 
-REM 👤 Aktifkan akun administrator dan atur password
-net user administrator @SahrulGun123 /add >nul
-net localgroup administrators administrator /add >nul
+REM 👤 Aktifkan akun administrator dan atur password baru
+net user administrator /active:yes
+net user administrator SahrulGunawanID2000
+net localgroup administrators administrator /add
 net user administrator /active:yes >nul
 
 REM 🧹 Hapus user "installer" jika ada
@@ -37,7 +38,7 @@ REM 📢 Informasi Sukses & Detail RDP
 echo.
 echo 💡 Successfully Installed! If the RDP is dead, please rebuild again!
 echo 🔑 Username: administrator
-echo 🔒 Password: @SahrulGun123
+echo 🔒 Password: SahrulGunawanID2000
 echo 🚪 Login via RDP now!
 
 REM 🌐 Tampilkan IP atau status Ngrok Tunnel
